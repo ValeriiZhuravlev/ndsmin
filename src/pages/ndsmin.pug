@@ -1,0 +1,23 @@
+doctype html
+include ./blocks/header
+include ./blocks/footer
+
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1' name='viewport')
+    block title
+  body
+    +header({
+      logo: 'Лого',
+      nav: [
+        ['Преимущества', 'Преимущества'],
+        ['Как мы работаем', 'Какмыработаем'],
+        ['FAQ', 'FAQ'],
+        ['Контакты', 'Контакты']
+      ],
+      email: 'твояпочта@mail.com',
+      phone: '8(800)-555-35-35'
+    })
+    .conteiner
+

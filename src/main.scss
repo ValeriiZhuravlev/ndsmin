@@ -1,0 +1,25 @@
+@import 'assets/style_utils/vars';
+@import 'assets/style_utils/normalize';
+@import 'assets/style_utils/libs';
+@import 'assets/fonts/font.scss';
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1600px;
+    min-width: 320px;
+    height: 100%;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.conteiner {
+    padding: 0 20px;
+}
+
+@import 'assets/blocks/header.scss';
