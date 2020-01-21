@@ -8,7 +8,9 @@ mixin header(opt)
                     li.header__item
                         a.header__link(href=`#${item[1]}`)= item[0]
         .header__contact.contact
-            .contact__email
+            .contact__data.contact__data_email
                 a.contact__link(href=`mailto:${opt.email}`)= opt.email
-            .contact__phone 
+            .contact__data.contact__data_phone
                 a.contact__link(href=`tel:${opt.phone}`)= opt.phone
+        .header__menu.header__menu(id='burger') 
+            span открыть меню

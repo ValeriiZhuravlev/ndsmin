@@ -1,0 +1,12 @@
+mixin features(opt)
+    section.features
+        h2.features__title Почему стоит обращаться к нам
+        p.features__subtitle Мы увеличиваем прибыль Вашей компании за счёт уменьшения налоговых выплат по налогу на добавленную стоимость и налогу на прибыль до 85%.
+        ul.features__list
+            each item in opt
+                li.featur.features__item
+                    .featur__box-icon.featur__icon_(data-text=`${item.title}`)
+                        img.featur__icon(src=`./assets/img/${item.class}.png`)
+                    .featur__content
+                        h3.featur__title= item.title
+                        p.featur__text= item.text

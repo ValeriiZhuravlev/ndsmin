@@ -1,11 +1,15 @@
-mixin banner
-    .row.prod-section
-        .col-lg-6.prod-img
-            img(src="assets/img/single-prod.jpg")
-        .col-lg-4.prod-desc
-            br
-            p.wow.fadeInUp(data-wow-delay="0.5s") The way to get started is to quit talking and begin doing. Get started with our tools and boost your productivity.
-            .link.wow.fadeInUp(data-wow-delay="0.5s")
-                a(href="shop.html") 
-                    | shop now
-                    ion-icon(name="arrow-round-forward")
+mixin banner(opt)
+    section.banner
+        .banner__heading
+            h1.banner__title Оптимизация НДС
+            p.banner__subtitle  Работаем по всей России
+        .banner__callback.callback
+            h2.callback__title= opt.title
+            each item in opt.text
+                p.callback__text= item
+            a.callback__button.button(href='#') Обратная связь
+        .banner__contact.contact
+            .contact__data.contact__data_email
+                a.contact__link(href=`mailto:${opt.email}`)= opt.email
+            .contact__data.contact__data_phone
+                a.contact__link(href=`tel:${opt.phone}`)= opt.phone

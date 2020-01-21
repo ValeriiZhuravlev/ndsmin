@@ -13,13 +13,38 @@ html, body {
     max-width: 1600px;
     min-width: 320px;
     height: 100%;
-    font-family: "Roboto";
+    font-family: 'Roboto', 'sans-serif';
     font-weight: 400;
     font-size: 14px;
+    line-height: 1.2;
 }
 
 .conteiner {
     padding: 0 20px;
 }
 
+h1 {
+    font-size: 53px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 840px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+
 @import 'assets/blocks/header.scss';
+@import 'assets/blocks/banner.scss';
+@import 'assets/blocks/features.scss';
