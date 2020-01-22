@@ -1,0 +1,12 @@
+mixin cost(opt)
+    section.cost
+        h2.cost__title= opt.title
+        p.cost__subtitle= opt.subtitle
+        table.cost__table
+            tr.cost__tr
+                each item in opt.table
+                    td.cost__td.cost__td_cost= item.cost
+            tr.cost__tr
+                each item in opt.table
+                    td.cost__td.cost__td_value= item.value    
+
