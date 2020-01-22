@@ -1,0 +1,90 @@
+.contacts {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+    background: url('./assets/img/window.jpg') no-repeat;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 2;
+    }
+
+    &__title {
+        font-size: 22px;
+    }
+
+    &__banner {
+        margin-left: 100px;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 28px;
+            right: 15px;
+            font-family: 'FontAwesome';
+            font-size: 16px;
+            color: #969494;
+        }
+
+        &_user {
+            &:after {
+                content: '\f007';
+            }
+        }
+
+        &_phone {
+            &:after {
+                content: '\f095';
+            }
+        }
+    }
+
+    &__label {
+        color: #969494;
+        &:after {
+            content: '*';
+            color: #CA1717;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 42px;
+        padding-left: 10px;
+        padding-right: 40px;
+        margin-bottom: 10px;
+        background: #D7D7D7;
+        border: none;
+        border-radius: 10px;
+
+
+
+
+    }
+
+    &__button {
+        margin-top: 12px;
+        background: transparent;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width:476px) {
+    .contacts { 
+        &__banner {
+            margin-left: 0;
+            margin: 0 auto;
+        }
+    }
+}

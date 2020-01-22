@@ -74,6 +74,8 @@
     }
 
     &__icon {
+        display: block;
+        width: 100%;
         max-width: 100px;
         transition: 0.5s ease-in-out;
     }

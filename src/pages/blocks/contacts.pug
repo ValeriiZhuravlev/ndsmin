@@ -1,0 +1,13 @@
+mixin contact(opt)
+    section.contacts
+        .contacts__banner.callback
+            h3.contacts__title= opt.title
+            p.contacts__subtitle= opt.subtitle
+            form.contacts__form
+                .contacts__wrapper.contacts__wrapper_user
+                    label.contacts__label(for='name') Имя
+                    input.contacts__input(placeholder='Иван Иванов'  id='name')
+                .contacts__wrapper.contacts__wrapper_phone
+                    label.contacts__label(for='phone') Телефон
+                    input.contacts__input(type='tel' placeholder='8(800)-555-35-35' id='phone')
+                button.contacts__button.button Отправить

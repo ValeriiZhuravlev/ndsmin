@@ -43,6 +43,10 @@ h2 {
     h1 {
         font-size: 32px;
     }
+
+    h2 {
+        font-size: 28px;
+    }
 }
 
 @import 'assets/blocks/header.scss';
@@ -50,3 +54,6 @@ h2 {
 @import 'assets/blocks/features.scss';
 @import 'assets/blocks/howwework.scss';
 @import 'assets/blocks/cost.scss';
+@import 'assets/blocks/aboutus.scss';
+@import 'assets/blocks/faq.scss';
+@import 'assets/blocks/contacts.scss';

@@ -1,0 +1,61 @@
+.aboutus {
+    min-height: 600px;
+    display: flex;
+    background: #267f9b;
+    color: #fff;
+
+    &__left {
+        padding-top: 50px;
+        width: 50%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 500px;
+        margin: 50px auto 0;
+        padding: 0 20px;
+        line-height: 1.5;
+    }
+
+    &__right {
+        width: 50%;
+        height: 600px;
+        background: url('./assets/img/cube.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .aboutus {
+        min-height: 450px;
+        &__left {
+            width: 100%;
+        }
+
+        &__right {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .aboutus {
+        min-height: 450px;
+        &__title {
+            margin: 0;
+        }
+
+        &__text {
+            margin-top: 30px;
+        }
+
+        &__left {
+            width: 100%;
+        }
+
+        &__right {
+            display: none;
+        }
+    }
+}

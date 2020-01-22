@@ -1,0 +1,16 @@
+mixin faq(opt)
+    -let i=1
+    -let j=1
+    section.faq
+        h2.faq__title= opt.title
+        .faq__wrapper
+            ul.faq__questions
+                each item in opt.question
+                    li.faq__question(class=`${item[1]}` data-question=`question-${i}`)
+                        p.faq__question-text= item[0]
+                        -i++
+            ul.faq__answers
+                each item in opt.answer
+                    li.faq__answer(class=`${item[1]}` data-answer=`answer-${j}`)
+                        p.faq__answer-text= item[0]
+                        -j++
