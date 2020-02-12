@@ -1,16 +1,11 @@
 mixin header(opt)
     header.header
         .header__logo.logo
-            a.header__link(href='#')= opt.logo
+            a.header__link(href='#heading')= opt.logo
         nav.header__navigation
             ul.header__list
                 each item in opt.nav
                     li.header__item
-                        a.header__link(href=`#${item[1]}`)= item[0]
-        .header__contact.contact
-            .contact__data.contact__data_email
-                a.contact__link(href=`mailto:${opt.email}`)= opt.email
-            .contact__data.contact__data_phone
-                a.contact__link(href=`tel:${opt.phone}`)= opt.phone
+                        a.header__link(href=`#${item[1]}` aria-haspopup='true')= item[0]
         .header__menu.header__menu(id='burger') 
             span открыть меню

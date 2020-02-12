@@ -1,37 +1,15 @@
-mixin footer
-    .container-fluid.footer
-        .section.container
-            footer.footer
-                .row
-                    .col-lg-3.block
-                        p 
-                            | Wordoutlet, 3581 Lunneta Street,
-                            br
-                            | Siesta Key, Florida. 20002,
-                            br
-                            | USA
-                    .col-lg-3.block
-                        p 
-                            | FAQs
-                            br
-                            | Return Policy
-                            br
-                            | Shipping
-                    .col-lg-3.block
-                        p 
-                            | Careers
-                            br
-                            | Community
-                            br
-                            | Wholesale
-                    .col-lg-3.block
-                        .media
-                            ul
-                                li
-                                    ion-icon(name="logo-facebook")
-                                li
-                                    ion-icon(name="logo-instagram")
-                                li
-                                    ion-icon(name="logo-twitter")
-                                li
-                                    ion-icon(name="logo-pinterest")
+mixin footer(opt)
+    footer.footer
+        .footer__logo.logo
+            a.footer__link(href='#')= opt.logo
+        .footer__wrapper
+            ul.footer__icons
+                each item in opt.icon
+                    li.footer__icon
+                        a.footer__link(href=`${item.link}` target='_blank')
+                            img.footer__icon-img(src=`${item.img}`)
+            .footer__contact.contact
+                .contact__data.contact__data_email
+                    a.contact__link(href=`mailto:${opt.email}`)= opt.email
+                .contact__data.contact__data_phone
+                    a.contact__link(href=`tel:${opt.phone}`)= opt.phone 

@@ -1,9 +1,8 @@
 mixin howwework(opt)
-    section.howwework
+    section.howwework(id='howwework')
         -let i = 0
         h2.howwework__title= opt.title
-        p.howwework__subtitle= opt.subtitle
-        ol.howwework__list
+        ul.howwework__list
             each item in opt.list
                 -i++
                 li.howwework__item

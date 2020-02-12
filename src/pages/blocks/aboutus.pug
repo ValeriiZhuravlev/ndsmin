@@ -2,5 +2,8 @@ mixin aboutus(opt)
     section.aboutus
         .aboutus__left
             h2.aboutus__title= opt.title
-            .aboutus__text= opt.text
+            ul.aboutus__list
+                each item in opt.list
+                    li.aboutus__item
+                        .aboutus__content= item.text
         .aboutus__right

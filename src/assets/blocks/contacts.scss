@@ -2,8 +2,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 600px;
+    min-height: calc(100vh - 60px);
     background: url('./assets/img/window.jpg') no-repeat;
+    background-size: cover;
     z-index: 1;
 
     &:after {
@@ -66,17 +67,36 @@
         background: #D7D7D7;
         border: none;
         border-radius: 10px;
+        box-sizing: border-box;
 
+        // &:focus {
+        //     outline: none;
+        //     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1); 
+        // }
 
+        // &:focus:valid {
+        //     border-bottom: 4px solid #55c57a;
+        // }
 
-
+        // &:focus:invalid {
+        //     border-bottom: 4px solid #ff7730;
+        // }
     }
 
     &__button {
+        position: relative;
         margin-top: 12px;
         background: transparent;
         width: 100%;
         border-radius: 10px;
+    }
+
+    &__success {
+        display: none;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 700;
+        color: #267f9b;
     }
 }
 

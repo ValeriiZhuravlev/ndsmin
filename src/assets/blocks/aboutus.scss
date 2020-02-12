@@ -4,23 +4,63 @@
     background: #267f9b;
     color: #fff;
 
+    &__title {
+        margin-bottom: 20px;
+    }
+
     &__left {
-        padding-top: 50px;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
         width: 50%;
         text-align: center;
         padding-bottom: 20px;
     }
 
-    &__text {
-        max-width: 500px;
+    &__list {
+        width: 75%;
         margin: 50px auto 0;
-        padding: 0 20px;
-        line-height: 1.5;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 350px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding-left: 45px;
+        padding-right: 2px;
+        min-height: 60px;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 16px;
+        text-align: left;
+        margin-right: 5px;
+        line-height: 1.3;
+        background: #fff;
+        border-radius: 10px;
+        color: #000;
+
+        &:after {
+            content: '\f058';
+            position: absolute;
+            font-family: 'FontAwesome';
+            font-size: 28px;
+            left: 14px;
+            color: #4ab840;
+        }
+    }
+
+    &__content {
+        padding: 10px;
     }
 
     &__right {
         width: 50%;
-        height: 600px;
+        min-height: 600px;
         background: url('./assets/img/cube.jpg') no-repeat center;
         background-size: cover;
     }
@@ -28,7 +68,13 @@
 
 @media screen and (max-width: 645px) {
     .aboutus {
+        padding-top: 50px;
         min-height: 450px;
+
+        &__list {
+            width: 90%;
+        }
+
         &__left {
             width: 100%;
         }
@@ -36,15 +82,16 @@
         &__right {
             display: none;
         }
+
+        &__item {
+            height: auto;
+        }
     }
 }
 
 @media screen and (max-width: 450px) {
     .aboutus {
         min-height: 450px;
-        &__title {
-            margin: 0;
-        }
 
         &__text {
             margin-top: 30px;
@@ -57,5 +104,11 @@
         &__right {
             display: none;
         }
+
+        &__item {
+            min-height: 60px;
+
+        }
     }
+
 }

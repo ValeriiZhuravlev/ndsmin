@@ -1,8 +1,9 @@
 const scroll = function() {
-    $(document).scroll(function() {
-        let $nav = $('.header');
-        $nav.toggleClass('scrolled', $(this).scrollTop() > 
-        $nav.height());
+    $(".header__navigation, .banner__callback, .logo").on("click", "a", function(event) {
+        event.preventDefault();
+        var anchorId  = $(this).attr("href");
+        scrollingDistance = $(anchorId).offset().top - $(".header").height();
+        $("html, body").animate({scrollTop: scrollingDistance}, 800);
     });
 }();
 

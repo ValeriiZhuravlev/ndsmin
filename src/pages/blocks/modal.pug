@@ -1,0 +1,19 @@
+mixin modal
+    .modal
+        .modal__window
+            button.modal__close(id='close')
+            h2.modal__title Мы обязательно вам ответим
+            form.modal__form
+                // Hidden Fields
+                input(type="hidden" name="project_name" value="НДС оптимизация")
+                input(type="hidden" name="admin_email" value="nds.optimaz@gmail.com")
+                input(type="hidden" name="form_subject" value="Заявка на звонок (Модальное окно)")
+                // Hidden Fields end
+                .modal__wrapper.modal__wrapper_user
+                    label.modal__label(for='nameModal') Имя
+                    input.modal__input(placeholder='Иван Иванов' id='nameModal' name='Имя' required)
+                .modal__wrapper.modal__wrapper_phone
+                    label.modal__label(for='phoneModal') Телефон
+                    input.modal__input.modal__input_phone(type='tel' placeholder='+7(___)___-__-__' id='phoneModal' name='Телефон' required)
+                button.button.modal__button(type='submit') Отправить
+                p.modal__success Заявка успешно отправленна! Вам позвонят в ближайшее время

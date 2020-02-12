@@ -1,0 +1,25 @@
+.aboutcompany {
+    padding:  40px 0;
+    background: rgba(38, 127, 155, 0.2);
+    &__title {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    &__wrapper {
+        max-width: 650px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        text-align: left;
+    }
+
+    &__link {
+        padding-right: 30px;
+        float: right;
+        cursor: pointer;
+        color: #267f9b;
+    }
+}

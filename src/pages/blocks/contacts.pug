@@ -1,13 +1,19 @@
 mixin contact(opt)
-    section.contacts
+    section.contacts(id='Contacts')
         .contacts__banner.callback
             h3.contacts__title= opt.title
             p.contacts__subtitle= opt.subtitle
             form.contacts__form
+                // Hidden Fields
+                input(type="hidden" name="project_name" value="НДС оптимизация")
+                input(type="hidden" name="admin_email" value="nds.optimaz@gmail.com")
+                input(type="hidden" name="form_subject" value="Заявка на звонок (footer)")
+                // Hidden Fields end
                 .contacts__wrapper.contacts__wrapper_user
                     label.contacts__label(for='name') Имя
-                    input.contacts__input(placeholder='Иван Иванов'  id='name')
+                    input.contacts__input.contacts__input_name(placeholder='Иван Иванов'  id='name' name='Имя' required)
                 .contacts__wrapper.contacts__wrapper_phone
                     label.contacts__label(for='phone') Телефон
-                    input.contacts__input(type='tel' placeholder='8(800)-555-35-35' id='phone')
-                button.contacts__button.button Отправить
+                    input.contacts__input.contacts__input_phone(type='tel' name='Телефон' placeholder='+7(___)___-__-__' id='phone' required)
+                button.contacts__button.button(type='submit') Отправить
+                p.contacts__success Заявка успешно отправленна! Вам позвонят в ближайшее время

@@ -7,5 +7,7 @@ import './main.scss'
 
  // CSS
 
-//  import '../node_modules/wowjs/node_modules/animate.css/source/_base.css'
-//  import '../node_modules/wowjs/node_modules/animate.css/source/fading_entrances/fadeInUp.css'
+ import '../node_modules/animate.css/source/_base.css'
+
+ import '../node_modules/animate.css/source/fading_entrances/fadeInUp.css'
+ import '../node_modules/animate.css/source/fading_entrances/fadeInDown.css'

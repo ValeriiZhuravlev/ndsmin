@@ -1,13 +1,14 @@
 mixin banner(opt)
-    section.banner
-        .banner__heading
-            h1.banner__title Оптимизация НДС
+    section.banner(id='heading')
+        .banner__heading.wow.fadeInDown
+            h1.banner__title Оптимизация
+                span НДС
             p.banner__subtitle  Работаем по всей России
         .banner__callback.callback
             h2.callback__title= opt.title
             each item in opt.text
                 p.callback__text= item
-            a.callback__button.button(href='#') Обратная связь
+            button.callback__button.button(id='openmodal') Обратная связь
         .banner__contact.contact
             .contact__data.contact__data_email
                 a.contact__link(href=`mailto:${opt.email}`)= opt.email

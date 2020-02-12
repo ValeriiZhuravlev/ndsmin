@@ -19,6 +19,12 @@ html, body {
     line-height: 1.2;
 }
 
+
+
+.footer {
+    width: 100%;
+}
+
 .conteiner {
     padding: 0 20px;
 }
@@ -33,6 +39,25 @@ h2 {
     letter-spacing: 1px;
 }
 
+html{
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 16px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #267f9b;
+    }
+}
+
 @media screen and (max-width: 840px) {
     h1 {
         font-size: 36px;
@@ -40,12 +65,24 @@ h2 {
 }
 
 @media screen and (max-width: 350px) {
+    .logo {
+        font-size: 16px;
+    }
+
     h1 {
         font-size: 32px;
     }
 
     h2 {
         font-size: 28px;
+    }
+
+    .main {
+        width:100vw;
+    }
+
+    section {
+        width: 100vw;
     }
 }
 
@@ -57,3 +94,7 @@ h2 {
 @import 'assets/blocks/aboutus.scss';
 @import 'assets/blocks/faq.scss';
 @import 'assets/blocks/contacts.scss';
+@import 'assets/blocks/footer.scss';
+@import 'assets/blocks/preload.scss';
+@import 'assets/blocks/modal.scss';
+@import 'assets/blocks/aboutcompany.scss';

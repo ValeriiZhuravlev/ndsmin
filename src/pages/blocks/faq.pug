@@ -1,16 +1,17 @@
 mixin faq(opt)
-    -let i=1
-    -let j=1
-    section.faq
+    section.faq(id='FAQ')
+        -let i = 0
         h2.faq__title= opt.title
         .faq__wrapper
             ul.faq__questions
                 each item in opt.question
-                    li.faq__question(class=`${item[1]}` data-question=`question-${i}`)
-                        p.faq__question-text= item[0]
-                        -i++
-            ul.faq__answers
-                each item in opt.answer
-                    li.faq__answer(class=`${item[1]}` data-answer=`answer-${j}`)
-                        p.faq__answer-text= item[0]
-                        -j++
+                    -i++
+                    li.faq__item
+                        .faq__question
+                            .faq__question-text= item[0]
+                            img.faq__plus(src='./assets/img/plus.svg')
+                            img.faq__minus(src='./assets/img/minus.svg')
+                        .faq__answer
+                            p.faq__answer-text= item[1]
+                            
+
