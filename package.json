@@ -62,7 +62,7 @@
     "gsap": "^3.0.4",
     "ionicons": "^4.6.3",
     "ionicons-npm": "^2.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.10",
     "wow.js": "^1.2.2",
