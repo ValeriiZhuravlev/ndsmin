@@ -17,7 +17,7 @@
 
     &__table {
         color: #fff;
-        max-width: 750px;
+        max-width: 751px;
         padding: 0 20px;
         width: 100%;
         margin: 20px auto;
@@ -30,19 +30,20 @@
         text-align: center;
         font-size: 20px;
         font-weight: 700;
-        background: #267f9b;
+        background: #a7cad4;
         display: inline-block;
         width: 150px;
         height: 80px;
-        
+
+
         &_value {
             background: rgba(38, 127, 155, 0.7);
-            &:after {
-                content: '%';
-                display: inline-block;
-                vertical-align: bottom;
-                font-size: 15px;
-            }
+            width: 600px;
+            word-spacing: 4px;
+        }
+
+        &_cost {
+            background: #267f9b;
         }
 
         &_title {
@@ -58,10 +59,12 @@
         }
 
         &_add {
+            width: 600px;
             background: rgba(38, 127, 155, 0.7);  
         }
     }
 }
+
 
 @media screen and (max-width: 765px) {
     .cost {
@@ -77,7 +80,15 @@
             }
 
             &_title {
-                font-size: 14px;
+                font-size: 12px;
+            }
+
+            &_value {
+                width: 400px;
+            }
+
+            &_add {
+                width: 400px;
             }
         }
     }
@@ -94,12 +105,21 @@
             }
 
             &_title {
-                font-size: 14px;
+                font-size: 12px;
+            }
+
+            &_value {
+                width: 400px;
+            }
+
+            &_add {
+                width: 400px;
+                padding: 20px 1px;
             }
         }
 
         &_title {
-            font-size: 13px;
+            font-size: 12px;
         }
     }
 }
@@ -112,6 +132,11 @@
 
         &__td {
             display: table-cell;
+
+
+            &_add {
+                padding: 20px 1px;
+            }
         }
     }
 }
@@ -125,6 +150,10 @@
         &__td {
             display: table-cell;
             font-size: 13px;
+
+            &_add {
+                font-size: 14px;
+            }
         }
     }
 }

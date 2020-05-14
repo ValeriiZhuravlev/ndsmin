@@ -86,6 +86,16 @@ html{
     }
 }
 
+@media screen and (max-width: 320px) {
+    .main {
+        width: 320px;
+    }
+
+    section {
+        width: 320px;
+    }
+}
+
 @import 'assets/blocks/header.scss';
 @import 'assets/blocks/banner.scss';
 @import 'assets/blocks/features.scss';

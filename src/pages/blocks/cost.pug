@@ -8,9 +8,7 @@ mixin cost(opt)
                     td.cost__td.cost__td_cost= item.cost
             tr.cost__tr
                 td.cost__td.cost__td_title= opt.sign[1]
-                each item in opt.table
-                    td.cost__td.cost__td_value= item.value    
+                    td.cost__td.cost__td_value(colspan='4') Индивидуально    
             tr.cost__tr
                 td.cost__td.cost__td_title= opt.sign[2]
-                each item in opt.table
-                    td.cost__td.cost__td_add= item.value2
+                    td.cost__td.cost__td_add(colspan='4') на 1% больше
